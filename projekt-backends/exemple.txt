@@ -1,0 +1,21 @@
+ Exempelanvändning i routes
+ts
+Kopiera
+Redigera
+// Tillgänglig för user, usp, admin
+app.get('/user/info', authenticateToken, authorizeAtLeast('user'), ...);
+
+// Tillgänglig för usp, admin
+app.get('/usp/info', authenticateToken, authorizeAtLeast('usp'), ...);
+
+// Endast admin
+app.get('/admin/panel', authenticateToken, authorizeAtLeast('admin'), ...);
+
+
+🎯 Sammanfattning
+Roll	authorizeAtLeast('user')	authorizeAtLeast('usp')	authorizeAtLeast('admin')
+user	✅	❌	❌
+usp	✅	✅	❌
+admin	✅	✅	✅
+
+npm run dev för start

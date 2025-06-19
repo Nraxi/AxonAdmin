@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "CommonJS",
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "esModuleInterop": true,
+    "strict": true,
+    "baseUrl": "./",
+    "paths": {
+      "*": ["src/*", "../shared/*"]
+    }
+  },
+  "include": ["src", "../shared/types", "../backend-auth/src/types/Role.ts"]
+}
